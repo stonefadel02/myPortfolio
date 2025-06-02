@@ -1128,3 +1128,108 @@ async function getRepoList() {
 // console.log(repoList[i].name);
 // }
 // })();
+
+// ======== TRANSLATION LOGIC START ========
+
+/**
+ * Loads the translation file for the given language.
+ * @param {string} language - The language code (e.g., "en", "fr").
+ * @returns {Promise<object>} A promise that resolves with the parsed JSON translations.
+ */
+async function loadTranslations(language) {
+  try {
+    const response = await fetch(`js/translations/${language}.json`);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status} for language ${language}`);
+    }
+    const translations = await response.json();
+    return translations;
+  } catch (error) {
+    console.error(`Could not load translations for ${language}:`, error);
+    // Return an empty object or default translations as a fallback
+    return {};
+  }
+}
+
+/**
+ * Applies the given translations to all elements with data-translate attributes.
+ * @param {object} translations - The translation object (keys: translation keys, values: translated strings).
+ */
+function applyTranslations(translations) {
+  document.querySelectorAll('[data-translate]').forEach(element => {
+    const key = element.getAttribute('data-translate');
+    if (translations[key]) {
+      // Handle nested elements like buttons with icons
+      // If the element has children and the first child is an icon, preserve it.
+      if (element.children.length > 0 && element.children[0].tagName === 'I' && element.childNodes.length > 1) {
+        // Assuming the text node is the last child
+        let textNode = element.childNodes[element.childNodes.length - 1];
+        if (textNode && textNode.nodeType === Node.TEXT_NODE) {
+          textNode.textContent = ' ' + translations[key]; // Add space for separation
+        } else {
+           // If no text node or structure is different, append new text node
+           element.appendChild(document.createTextNode(' ' + translations[key]));
+        }
+      } else if (element.tagName === 'INPUT' && element.getAttribute('type') === 'submit') {
+        element.value = translations[key];
+      } else if (element.tagName === 'TEXTAREA' || (element.tagName === 'INPUT' && element.type !== 'button' && element.type !== 'submit')) {
+        // For input and textarea, you might want to set placeholder or value
+        // This example sets textContent, which might not be what's needed for form fields.
+        // If you intend to translate placeholders:
+        // element.placeholder = translations[key];
+        // For now, let's assume these are not the primary targets for textContent translation
+        // or that specific handling will be added if needed.
+        // Defaulting to textContent for other cases.
+        element.textContent = translations[key];
+      }
+      else {
+        element.textContent = translations[key];
+      }
+    } else {
+      console.warn(`Missing translation for key: ${key}`);
+    }
+  });
+}
+
+/**
+ * Sets the application language.
+ * Loads translations, applies them, and saves the preference.
+ * @param {string} language - The language code to set.
+ */
+async function setLanguage(language) {
+  try {
+    const translations = await loadTranslations(language);
+    applyTranslations(translations);
+    localStorage.setItem('selectedLanguage', language);
+    console.log(`Language set to ${language}`);
+
+    // Update active state for language switcher flags
+    if (language === 'en') {
+      $('#lang-en-btn').addClass('active');
+      $('#lang-fr-btn').removeClass('active');
+    } else if (language === 'fr') {
+      $('#lang-fr-btn').addClass('active');
+      $('#lang-en-btn').removeClass('active');
+    }
+
+  } catch (error) {
+    console.error(`Failed to set language to ${language}:`, error);
+  }
+}
+
+// Page load logic for translations
+$(document).ready(function () {
+  const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to 'en' if nothing is saved
+  setLanguage(savedLanguage); // This will also set the active class via the updated setLanguage function
+
+  // Add event listeners for language switcher flags
+  $('#lang-en-btn').on('click', function() {
+    setLanguage('en');
+  });
+
+  $('#lang-fr-btn').on('click', function() {
+    setLanguage('fr');
+  });
+});
+
+// ======== TRANSLATION LOGIC END ========

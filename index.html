@@ -148,41 +148,45 @@
           <ul class="navbar-links">
             <li class="nav-card-item">
               <a class="nav-link js-scroll-trigger noselect" onclick="toAbout()"
-                >About me</a
+                ><span data-translate="nav_about_me">About me</span></a
               >
             </li>
             <li class="nav-card-item">
               <a
                 class="nav-link js-scroll-trigger noselect"
                 onclick="toSkills()"
-                >Skills</a
+                ><span data-translate="nav_skills">Skills</span></a
               >
             </li>
             <li class="nav-card-item">
               <a
                 class="nav-link js-scroll-trigger noselect"
                 onclick="toProjects()"
-                >Projects</a
+                ><span data-translate="nav_projects">Projects</span></a
               >
             </li>
             <li class="nav-card-item">
               <a
                 class="nav-link js-scroll-trigger noselect"
                 onclick="toMilestones()"
-                >Milestones</a
+                ><span data-translate="nav_milestones">Milestones</span></a
               >
             </li>
             <li class="nav-card-item">
               <a
                 class="nav-link js-scroll-trigger noselect"
                 onclick="toContact()"
-                >Contact</a
+                ><span data-translate="nav_contact">Contact</span></a
               >
             </li>
           </ul>
+          <div class="language-switcher">
+            <img src="img/icon/lang-en.png" alt="English" id="lang-en-btn" class="lang-flag" data-lang="en">
+            <img src="img/icon/fr.svg" alt="Français" id="lang-fr-btn" class="lang-flag" data-lang="fr">
+          </div>
           <a href="./Stone Fadel CurricumVitae Resume.pdf"
             ><button type="button" class="cv-download noselect">
-              <i class="fa-solid fa-cloud-arrow-down fa-lg"></i>Resume
+              <i class="fa-solid fa-cloud-arrow-down fa-lg"></i><span data-translate="nav_resume_button">Resume</span>
             </button></a
           >
         </div>
@@ -201,7 +205,7 @@
           <div class="container" data-aos="fade-down" data-aos-duration="1000">
             <div class="text">
               <h1>
-                Hi, I am<br />
+                <span data-translate="intro_greeting">Hi, I am</span><br />
                 <span class="green my-name">Stone,</span>
                 <br />
               </h1>
@@ -209,30 +213,30 @@
                 <h2><span class="typing-text noselect"></span></h2>
               </div>
               <p>
-                Welcome to my portfolio!
-                <span id="intro-p">Stone AFEDJOU</span> is an
-                <span id="intro-p">Experienced</span>
-                <span id="intro-p">Full Stack Developer</span> a passion for
-                creating <span id="intro-p">visually stunning</span> and
-                <span id="intro-p">intuitive</span> web experiences. With a
-                <span id="intro-p">unique</span> blend of technical skills and
-                creative flair, there's <span id="intro-p">confidence</span> in
-                the ability to deliver
-                <span id="intro-p">custom solutions</span> to various project
-                requirements.
+                <span data-translate="intro_welcome">Welcome to my portfolio!</span>
+                <span id="intro-p" data-translate="intro_stone_afedjou">Stone AFEDJOU</span> <span data-translate="intro_is_an">is an</span>
+                <span id="intro-p" data-translate="intro_experienced">Experienced</span>
+                <span id="intro-p" data-translate="intro_full_stack_developer">Full Stack Developer</span> <span data-translate="intro_passion">a passion for
+                creating</span> <span id="intro-p" data-translate="intro_visually_stunning">visually stunning</span> <span data-translate="intro_and">and</span>
+                <span id="intro-p" data-translate="intro_intuitive">intuitive</span> <span data-translate="intro_web_experiences">web experiences. With a</span>
+                <span id="intro-p" data-translate="intro_unique_blend">unique</span> <span data-translate="intro_blend_of_skills">blend of technical skills and
+                creative flair, there's</span> <span id="intro-p" data-translate="intro_confidence">confidence</span> <span data-translate="intro_in_ability">in
+                the ability to deliver</span>
+                <span id="intro-p" data-translate="intro_custom_solutions">custom solutions</span> <span data-translate="intro_to_various_projects">to various project
+                requirements.</span>
               </p>
               <div class="intro-btns">
                 <a class="button btn-cv-download noselect" href="./Stone Fadel CurricumVitae Resume.pdf"
-                  ><i class="fa-solid fa-cloud-arrow-down fa-lg"></i>Resume</a
+                  ><i class="fa-solid fa-cloud-arrow-down fa-lg"></i><span data-translate="intro_resume_button">Resume</span></a
                 >
                 <a
                   class="button btn-contact contact-btn hb-fill-right-bg noselect"
                   onclick="toContact()"
                   ><i class="fa-regular fa-envelope fa-lg"></i>
-                  <span>Contact Me</span></a
+                  <span data-translate="intro_contact_me_button">Contact Me</span></a
                 >
               </div>
-              <a class="scroll noselect" onclick="toAbout()">Scroll Down</a>
+              <a class="scroll noselect" onclick="toAbout()"><span data-translate="intro_scroll_down">Scroll Down</span></a>
             </div>
             <div class="img">
               <img
@@ -269,7 +273,7 @@
             data-aos="fade-up"
             data-aos-duration="1000"
           >
-            <h6 class="section-title">About Me</h6>
+            <h6 class="section-title" data-translate="about_me_title">About Me</h6>
             <div class="about-wrapper">
               <div class="left">
                 <div>
@@ -280,8 +284,8 @@
                   />
                   <h2>
                     <span class="green counter">01</span>
-                    <span class="green"> Years</span>
-                    Job Experience
+                    <span class="green" data-translate="about_me_years"> Years</span>
+                    <span data-translate="about_me_job_experience">Job Experience</span>
                   </h2>
                 </div>
                 <div>
@@ -292,16 +296,16 @@
                   />
                   <h2>
                     <span class="green counter">10</span
-                    ><span class="green">+</span> Projects Completed
+                    ><span class="green">+</span> <span data-translate="about_me_projects_completed">Projects Completed</span>
                   </h2>
                 </div>
               </div>
               <div class="right">
                 <h2>
-                  What are my strongest sides
-                  <span class="green">and skills?</span>
+                  <span data-translate="about_me_strongest_sides">What are my strongest sides</span>
+                  <span class="green" data-translate="about_me_and_skills">and skills?</span>
                 </h2>
-                <p>
+                <p data-translate="about_me_p1">
                   One of my strongest qualities as a full stack developer is my
                   ability to think critically and solve problems. I excel at
                   breaking down complex projects into manageable chunks and
@@ -309,13 +313,13 @@
                   am also very organized and detail-oriented, which allows me to
                   complete assignments on time and to the highest standards.
                 </p>
-                <p>
+                <p data-translate="about_me_p2">
                   As a full-stack developer, I'm proficient in a variety of programming languages and frameworks, including HTML, CSS, JavaScript and Python. I have experience with popular technologies such as MongoDB, Express, React, Vuejs,Node.js, etc and am proficient in integrating resources with wordpress as well as having the ability to adapt quickly to new technologies and frameworks. I have a wide range of knowledge of technologies beyond those
                   mentioned.
 
 Translated with DeepL.com (free version)
                 </p>
-                <p>
+                <p data-translate="about_me_p3">
                   I am also a strong communicator and able to effectively
                   collaborate with clients and team members to understand their
                   needs and translate them into functional specifications.
@@ -330,7 +334,7 @@ Translated with DeepL.com (free version)
         <!-- My bio -->
         <section id="bio">
           <div class="container" data-aos="fade-up" data-aos-duration="1000">
-            <h6 class="section-title">My Bio</h6>
+            <h6 class="section-title" data-translate="bio_title">My Bio</h6>
             <div class="bio">
               <div class="img">
                 <img
@@ -342,15 +346,15 @@ Translated with DeepL.com (free version)
               </div>
               <div class="text">
                 <h2>
-                  <span class="green">Biography,<br /></span> a few words
+                  <span class="green" data-translate="bio_heading_biography">Biography,<br /></span> <span data-translate="bio_heading_few_words">a few words</span>
                 </h2>
-                <p>
+                <p data-translate="bio_p1">
                   Hi, I’m Stone AFEDJOU, and I’m a full stack developer passionate about creating efficient and user-friendly applications. After completing my training at the Coding Academy of Epitech, I gained solid technical skills that I apply to various projects.
                 </p>
-                <p>
+                <p data-translate="bio_p2">
                   Outside of development, I am a big fan of anime and video games. My favorite game, Brawl Stars, reflects my passion for strategy and competition. These hobbies help me foster creativity and enhance my problem-solving abilities.
                 </p>
-                <p>
+                <p data-translate="bio_p3">
                   I consider myself a reliable person who is always ready to take on challenges. I particularly enjoy teamwork, even under pressure, and I am constantly on the lookout for new opportunities to learn and grow. My commitment to delivering quality work is at the heart of my professional approach, as I always aim to satisfy my clients. I look forward to collaborating with my future clients and partners to create exciting and innovative projects.
                 </p>
               </div>
@@ -376,111 +380,111 @@ Translated with DeepL.com (free version)
         <!-- Skills -->
         <section id="skills" class="text-center">
           <div class="container" data-aos="fade-up" data-aos-duration="1000">
-            <h6 class="section-title">Skills</h6>
-            <h3 class="skill-label">Programming Skills</h3>
+            <h6 class="section-title" data-translate="skills_title">Skills</h6>
+            <h3 class="skill-label" data-translate="skills_programming_skills">Programming Skills</h3>
             <div class="skill-cards-container">
               <div class="div-card">
                 <div
                   class="div-card-item mongodb"
                   title="Level : Advanced Beginner"
                 ></div>
-                <span>MongoDB</span>
+                <span data-translate="skills_mongodb">MongoDB</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item express-js"
                   title="Level : Proficient"
                 ></div>
-                <span>Express.js</span>
+                <span data-translate="skills_express_js">Express.js</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item react-js"
                   title="Level : Proficient"
                 ></div>
-                <span>React.js</span>
+                <span data-translate="skills_react_js">React.js</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item node-js"
                   title="Level : Proficient"
                 ></div>
-                <span>Node.js</span>
+                <span data-translate="skills_node_js">Node.js</span>
               </div>
               <div class="div-card">
                 <div class="div-card-item js" title="Level : Expert"></div>
-                <span>JavaScript</span>
+                <span data-translate="skills_javascript">JavaScript</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item python"
                   title="Level : Proficient"
                 ></div>
-                <span>Python</span>
+                <span data-translate="skills_python">Python</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item next-js"
                   title="Level : Proficient"
                 ></div>
-                <span>Next.js</span>
+                <span data-translate="skills_next_js">Next.js</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item typescript"
                   title="Level : Advanced Beginner"
                 ></div>
-                <span>TypeScript</span>
+                <span data-translate="skills_typescript">TypeScript</span>
               </div>
               <div class="div-card">
                 <div class="div-card-item html" title="Level : Expert"></div>
-                <span>HTML</span>
+                <span data-translate="skills_html">HTML</span>
               </div>
               <div class="div-card">
                 <div class="div-card-item css" title="Level : Expert"></div>
-                <span>CSS</span>
+                <span data-translate="skills_css">CSS</span>
               </div>
             </div>
-            <h3 class="skill-label">Tools & Other Skills</h3>
+            <h3 class="skill-label" data-translate="skills_tools_other_skills">Tools & Other Skills</h3>
             <div class="skill-cards-container">
               <div class="div-card">
                 <div
                   class="div-card-item ux-ui"
                   title="Level : Proficient"
                 ></div>
-                <span>UI/UX</span>
+                <span data-translate="skills_ux_ui">UI/UX</span>
               </div>
               <div class="div-card">
                 <div class="div-card-item git" title="Level : Expert"></div>
-                <span>Git</span>
+                <span data-translate="skills_git">Git</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item docker"
                   title="Level : Advanced Beginner"
                 ></div>
-                <span>Docker</span>
+                <span data-translate="skills_docker">Docker</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item devops"
                   title="Level : Proficient"
                 ></div>
-                <span>DevOps</span>
+                <span data-translate="skills_devops">DevOps</span>
               </div>
             </div>
-            <h3 class="skill-label">Communication Skills</h3>
+            <h3 class="skill-label" data-translate="skills_communication_skills">Communication Skills</h3>
             <div class="skill-cards-container">
               <div class="div-card">
                 <div class="div-card-item sinhala" title="Level : Native"></div>
-                <span>French</span>
+                <span data-translate="skills_french">French</span>
               </div>
               <div class="div-card">
                 <div
                   class="div-card-item english"
                   title="Level : Proficient"
                 ></div>
-                <span>English</span>
+                <span data-translate="skills_english">English</span>
               </div>
       
             </div>
@@ -506,7 +510,7 @@ Translated with DeepL.com (free version)
         <!-- Projects -->
         <section id="projects">
           <div class="container" data-aos="fade-up" data-aos-duration="1000">
-            <h6 class="section-title">Projects</h6>
+            <h6 class="section-title" data-translate="projects_title">Projects</h6>
             <div class="projects-section">
               <div class="project-data-wrapper">
                 <div class="project-data"></div>
@@ -540,67 +544,67 @@ Translated with DeepL.com (free version)
         <!-- Special Milestones -->
         <section id="milestones" class="text-center">
           <div class="container" data-aos="fade-up" data-aos-duration="1000">
-            <h6 class="section-title">Special Milestones</h6>
+            <h6 class="section-title" data-translate="milestones_title">Special Milestones</h6>
             <div class="milestones">
               <div class="timeline">
                 <ul>
                   <li>
                     <div class="timeline-content">
-                      <h3 class="date">Juin 2024-Now</h3>
-                      <h2 class="title education">Full stack developer</h2>
-                      <h3 class="sub-title school">University : Codind Acedemy by Epitech</h3>
-                      <p class="description">It's a superb course that has enabled me to work on a multitude of projects with different technologies in conditions of preparation for professional life. This training has enabled me to acquire skills adapted to corporate life and the job market.</p>
+                      <h3 class="date" data-translate="milestones_date_1">Juin 2024-Now</h3>
+                      <h2 class="title education" data-translate="milestones_title_1">Full stack developer</h2>
+                      <h3 class="sub-title school" data-translate="milestones_subtitle_1">University : Codind Acedemy by Epitech</h3>
+                      <p class="description" data-translate="milestones_desc_1">It's a superb course that has enabled me to work on a multitude of projects with different technologies in conditions of preparation for professional life. This training has enabled me to acquire skills adapted to corporate life and the job market.</p>
 
                       
                     </div>
                   </li>
                   <li>
                     <div class="timeline-content">
-                      <h3 class="date">Octobre 2023-Mai 2024</h3>
-                      <h2 class="title job">Web Developer and Wordpress Integrator at
+                      <h3 class="date" data-translate="milestones_date_2">Octobre 2023-Mai 2024</h3>
+                      <h2 class="title job" data-translate="milestones_title_2">Web Developer and Wordpress Integrator at
                         Honadi</h2>
-                      <p class="description">
+                      <p class="description" data-translate="milestones_desc_2">
                         Honadi is a company that deals in the digital field. I learned a lot there. I was a web developer and wordpress integrator. They used more wordpress to design their sites, and my role as integrator gave me the skills of content and resource integrator.
                       </p>
                     </div>
                   </li>
                   <li>
                     <div class="timeline-content">
-                      <h3 class="date">Mai 2023-Septembre 2023</h3>
-                      <h2 class="title job">Stagiaire remote a Biris Technologie/Londres</h2>
-                      <p class="description">
+                      <h3 class="date" data-translate="milestones_date_3">Mai 2023-Septembre 2023</h3>
+                      <h2 class="title job" data-translate="milestones_title_3">Stagiaire remote a Biris Technologie/Londres</h2>
+                      <p class="description" data-translate="milestones_desc_3">
                         Biris is a tech company that deals with everything to do with technology. I was an intern front-end web developer and worked on several projects including agireau, shippackage, the Biris technologie website. We used vuejs and api in particular.
                       </p>
                     </div>
                   </li>
                   <li>
                     <div class="timeline-content">
-                      <h3 class="date">Juillet 2022 - Septembre 2022</h3>
-                      <h2 class="title education">
+                      <h3 class="date" data-translate="milestones_date_4">Juillet 2022 - Septembre 2022</h3>
+                      <h2 class="title education" data-translate="milestones_title_4">
                         Stagiaire a TIC AGROBUSINESS/
                         Cotonou-Agla
                       </h2>
                      
-                      <p class="description">
+                      <p class="description" data-translate="milestones_desc_4">
                         TIC is a company specializing in the digitalization of agriculture. I did an internship for a few months, during which I was asked to work with the other interns to develop a task management office application for their secretaries. We used laravel and bootstrap.
                       </p>
                     </div>
                   </li>
                   <li>
                     <div class="timeline-content">
-                      <h3 class="date">2020 - 2023</h3>
-                      <h2 class="title education">1ère Année - 2ème Année - 3ème Année</h2>
-                      <h3 class="sub-title school">University : UATM Gasa-Formation Cotonou, Gbegamey</h3>
-                      <p class="description">
+                      <h3 class="date" data-translate="milestones_date_5">2020 - 2023</h3>
+                      <h2 class="title education" data-translate="milestones_title_5">1ère Année - 2ème Année - 3ème Année</h2>
+                      <h3 class="sub-title school" data-translate="milestones_subtitle_5">University : UATM Gasa-Formation Cotonou, Gbegamey</h3>
+                      <p class="description" data-translate="milestones_desc_5">
                         Génie Electrique/ Système Informatique et Logiciels
                       </p>
                     </div>
                   </li>
                   <li>
                     <div class="timeline-content">
-                      <h3 class="date">2017 - 2020</h3>
-                      <h2 class="title education">Baccalauréat - Série D</h2>
-                      <h3 class="sub-title school">School : Jean Piaget I, Calavi Tanpke</h3>
+                      <h3 class="date" data-translate="milestones_date_6">2017 - 2020</h3>
+                      <h2 class="title education" data-translate="milestones_title_6">Baccalauréat - Série D</h2>
+                      <h3 class="sub-title school" data-translate="milestones_subtitle_6">School : Jean Piaget I, Calavi Tanpke</h3>
                       
                     </div>
                   </li>
@@ -629,9 +633,9 @@ Translated with DeepL.com (free version)
         <!-- Contact -->
         <section id="contact" class="text-center">
           <div class="container" data-aos="fade-up" data-aos-duration="1000">
-            <h6 class="section-title">Contact</h6>
+            <h6 class="section-title" data-translate="contact_title">Contact</h6>
             <h2 class="contact-title">
-              Call or write <span class="green">anytime</span>
+              <span data-translate="contact_heading_call_or_write">Call or write</span> <span class="green" data-translate="contact_heading_anytime">anytime</span>
             </h2>
             <div class="row">
               <div class="form col-md-7 col-lg-8">
@@ -641,7 +645,7 @@ Translated with DeepL.com (free version)
                   method="post"
                 >
                   <div class="form-group">
-                    <label for="name">Full Name</label>
+                    <label for="name" data-translate="contact_label_full_name">Full Name</label>
                     <input
                       type="text"
                       name="Name"
@@ -652,7 +656,7 @@ Translated with DeepL.com (free version)
                     />
                   </div>
                   <div class="form-group">
-                    <label for="email">E-Mail Address</label>
+                    <label for="email" data-translate="contact_label_email_address">E-Mail Address</label>
                     <input
                       type="email"
                       name="email"
@@ -663,7 +667,7 @@ Translated with DeepL.com (free version)
                     />
                   </div>
                   <div class="form-group">
-                    <label for="email">Message</label>
+                    <label for="email" data-translate="contact_label_message">Message</label>
                     <textarea
                       title="message"
                       class="form-control"
@@ -677,7 +681,7 @@ Translated with DeepL.com (free version)
                     class="button btn-send-message noselect"
                   >
                     <i class="fa-solid fa-paper-plane fa-lg"></i>
-                    Send Message
+                    <span data-translate="contact_send_message_button">Send Message</span>
                   </button>
                 </form>
               </div>
@@ -698,56 +702,56 @@ Translated with DeepL.com (free version)
               <footer>
                 <div class="main">
                   <div class="col1">
-                    <h3 class="heading">Quick Links</h3>
+                    <h3 class="heading" data-translate="footer_quick_links">Quick Links</h3>
                     <div class="footer-nav">
                       <ul>
                         <li>
                           <a href="https://stone-portfolio-link.netlify.app">
-                            Home
+                            <span data-translate="footer_home">Home</span>
                           </a>
                         </li>
                         <li>
-                          <a onclick="toAbout()"> About </a>
+                          <a onclick="toAbout()"> <span data-translate="footer_about">About</span> </a>
                         </li>
                         <li>
-                          <a onclick="toSkills()"> Skills </a>
+                          <a onclick="toSkills()"> <span data-translate="footer_skills">Skills</span> </a>
                         </li>
                         <li>
-                          <a onclick="toprojects()"> Projects </a>
+                          <a onclick="toprojects()"> <span data-translate="footer_projects">Projects</span> </a>
                         </li>
                         <li>
-                          <a onclick="toMilestones()"> Milestones </a>
+                          <a onclick="toMilestones()"> <span data-translate="footer_milestones">Milestones</span> </a>
                         </li>
                         <li>
-                          <a onclick="toContact()"> Contact </a>
+                          <a onclick="toContact()"> <span data-translate="footer_contact">Contact</span> </a>
                         </li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="col2">
-                    <h3 class="heading">Support</h3>
+                    <h3 class="heading" data-translate="footer_support">Support</h3>
                     <div class="support">
                       <ul>
                         <li>
-                          <a href="">Terms & Conditions</a>
+                          <a href=""><span data-translate="footer_terms_conditions">Terms & Conditions</span></a>
                         </li>
                         <li>
                           <a
                             href="https://www.freeprivacypolicy.com/live/2ddf28e1-76ee-4aa1-b7f5-57670fccf0d4"
                             target="_blank"
-                            >Privacy</a
+                            ><span data-translate="footer_privacy">Privacy</span></a
                           >
                         </li>
                         <li>
-                          <a href="">Cookie preferences</a>
+                          <a href=""><span data-translate="footer_cookie_preferences">Cookie preferences</span></a>
                         </li>
                       </ul>
                     </div>
                   </div>
 
                   <div class="col3">
-                    <h3 class="heading">Get in touch</h3>
+                    <h3 class="heading" data-translate="footer_get_in_touch">Get in touch</h3>
                     <div class="social social-media-set">
                       <a
                         title="GitHub"
@@ -775,9 +779,9 @@ Translated with DeepL.com (free version)
                   <div class="container">
                     <div class="copyright">
                       <p>
-                        Copyright &copy; 2024 | All rights reserved. Made
-                        with
-                        <span id="heart-icon">&#10084;</span> by
+                        <span data-translate="footer_copyright">Copyright &copy; 2024 | All rights reserved. Made
+                        with</span>
+                        <span id="heart-icon">&#10084;</span> <span data-translate="footer_by">by</span>
                         <a
                           href="https://github.com/stonefadel02"
                           title="Official Website"
